@@ -1,5 +1,3 @@
-library task_1_taxi;
-
 import 'package:hw_flutter/task_1_taxi.dart';
 
 void main(List<String> arguments) {
