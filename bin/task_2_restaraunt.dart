@@ -17,5 +17,7 @@ void main(List<String> arguments) {
     return result;
   };
   Day.callItADay(dishes, sale, tax);
+  print('');
+  print('----------------------');
   print('Today we sold: ${Day.dishesOrderedToday} items');
 }

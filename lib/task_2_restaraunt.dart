@@ -8,6 +8,7 @@ class Day {
       double Function(Dish) dynamicSaleProcessor,
       double Function(double beforeTax) taxesProcessor) {
     for (final (index, item) in dishes.indexed) {
+      print("______________");
       final amount = _OrderFactory.createOrder(item).calculateTotal(
           dynamicSaleProcessor, taxesProcessor,
           afterEachDish: _amountUpdated);
@@ -30,8 +31,11 @@ class _Order {
       {void Function(int)? afterEachDish}) {
     double finalAmount = 0;
     dishes.forEach((key, value) {
-      finalAmount += (tax(dynamicSale(key)) * value);
+      final finalPrice = (tax(dynamicSale(key)));
+      final finalSum = finalPrice * value;
+      finalAmount += finalSum;
       afterEachDish?.call(value);
+      print('Dish - $key: price = ${key.price}, price after tax = $finalPrice, amount = $value, final sum = $finalSum');
     });
     return finalAmount;
   }
