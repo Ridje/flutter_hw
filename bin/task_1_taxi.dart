@@ -1,6 +1,6 @@
 library task_1_taxi;
 
-import 'package:task_1_taxi/task_1_taxi.dart';
+import 'package:hw_flutter/task_1_taxi.dart';
 
 void main(List<String> arguments) {
   int result = 0;
@@ -9,3 +9,4 @@ void main(List<String> arguments) {
   }
   print("total amount: $result");
 }
+

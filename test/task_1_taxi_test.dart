@@ -1,4 +1,4 @@
-import 'package:task_1_taxi/task_1_taxi.dart';
+import 'package:hw_flutter/task_1_taxi.dart';
 import 'package:test/test.dart';
 
 void main() {
